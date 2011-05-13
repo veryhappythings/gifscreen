@@ -1,4 +1,5 @@
-%img{:src => @gif.url}
+- if @gif
+  %img{:src => @gif.url}
 
 != form_for @new_gif do |f|
   != f.text_field :url
