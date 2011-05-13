@@ -1,5 +1,5 @@
 - if @gif
-  %img{:src => @gif.url}
+  %img{:src => @gif.url, :style => "height: 100%"}
 
 != form_for @new_gif do |f|
   != f.text_field :url
