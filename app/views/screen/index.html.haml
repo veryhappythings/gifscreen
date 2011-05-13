@@ -1,0 +1,6 @@
+%img{:src => @gif.url}
+
+!= form_for @new_gif do |f|
+  != f.text_field :url
+  != f.submit 'submit'
+
