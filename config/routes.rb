@@ -2,6 +2,8 @@ Gifscreen::Application.routes.draw do
   root :to => 'screen#index'
   get "screen/index"
 
+  get 'gifs/latest' => 'gifs#latest'
+
   resources :gifs
 
   # The priority is based upon order of creation:

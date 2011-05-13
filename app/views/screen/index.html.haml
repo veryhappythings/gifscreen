@@ -5,3 +5,12 @@
   != f.text_field :url
   != f.submit 'submit'
 
+:javascript
+
+  $(document).ready(function () {
+    setInterval(function () {
+      $.get('/gifs/latest', {}, function(url) {
+        $('img').attr('src', url)
+      });
+    }, 60*1000);
+  });

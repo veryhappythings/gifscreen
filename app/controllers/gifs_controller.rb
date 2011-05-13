@@ -3,4 +3,11 @@ class GifsController < ApplicationController
     Gif.create(params[:gif])
     redirect_to '/'
   end
+
+  def latest
+    @gif = Gif.order('gifs.created_at DESC').first
+    if @gif
+      render :layout => false
+    end
+  end
 end
